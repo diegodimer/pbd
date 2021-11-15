@@ -13,6 +13,11 @@ INSERT INTO stock_price(
     FROM msft
 );
 
+INSERT INTO stock_price(
+    SELECT 'TSLA',* 
+    FROM tsla
+);
+
 CREATE TABLE tweets_with_stock_price AS (
     SELECT 
         tweet.tweet_id, 

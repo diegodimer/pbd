@@ -67,6 +67,18 @@ CREATE TABLE msft(
 );
 -- Não achei TSLA ou GOOG/GOOGL no nasdaq
 
+CREATE TABLE tsla(
+    dt date NOT NULL,
+    low_price double precision NOT NULL,
+    open_price double precision NOT NULL,
+    volume bigint NOT NULL,
+    high_price double precision NOT NULL,
+    close_price double precision NOT NULL,
+    adjusted_close_price double precision NOT NULL,
+    PRIMARY KEY (dt)
+);
+-- do forbes2000
+
 CREATE TABLE raw_tweet(
     tweet_id bigint NOT NULL,
     writer text,

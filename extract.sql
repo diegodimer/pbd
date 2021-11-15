@@ -13,4 +13,6 @@ SET datestyle='ISO, DMY';
 
 \copy msft(dt, low_price, open_price, volume, high_price, close_price, adjusted_close_price) FROM './csv/nasdaq/csv/MSFT.csv' DELIMITER ',' CSV HEADER;
 
+\copy tsla(dt, low_price, open_price, volume, high_price, close_price, adjusted_close_price) FROM './csv/forbes2000/csv/TSLA.csv' DELIMITER ',' CSV HEADER;
+
 SET datestyle=default;

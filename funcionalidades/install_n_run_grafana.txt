@@ -1,0 +1,5 @@
+step1: download grafana -> https://grafana.com/grafana/download
+
+step2: (ubuntu/debian): sudo /bin/systemctl start grafana-server
+
+step3: type localhost:3000 in browser
