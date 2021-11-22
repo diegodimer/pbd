@@ -42,3 +42,8 @@ CREATE TABLE tweets_with_stock_price AS (
     ON (to_timestamp(tweet.post_date)::DATE = stock_price.dt
         AND company_tweet.symbol = stock_price.symbol)
 );
+
+ALTER TABLE tweets_with_stock_price 
+ADD COLUMN sentiment float NULL;
+
+CREATE INDEX tweet_id_idx ON tweets_with_stock_price USING btree(tweet_id);
