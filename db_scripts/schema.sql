@@ -1,3 +1,4 @@
+
 CREATE TABLE company (
     ticker_symbol VARCHAR(5) NOT NULL,
     company_name VARCHAR(15) NOT NULL,
