@@ -1,8 +1,8 @@
 ## Funcionalidades básicas
 - Consultar qual das empresas ́e a mais comentada no Twitter **DONE**
-- Consulta quais sao os usuarios que mais comentam sobre uma empresa
--  Consultar quais empresas geram mais engajamento (likes e retweets) **DONE**
--  Consultar quais empresas geram mais comentarios (empresas possivelmente mais controversas) **DONE**
+- Consulta quais sao os usuarios que mais comentam sobre uma empresa **DONE**
+- Consultar quais empresas geram mais engajamento (likes e retweets) **DONE**
+- Consultar quais empresas geram mais comentarios (empresas possivelmente mais controversas) **DONE**
 - Verificar se usuarios que mais comentam sobre uma empresa sao os que geram mais engajamento 
 - Selecionar amostras de tweets em diferentes peŕıodos e valor de açoes
 
