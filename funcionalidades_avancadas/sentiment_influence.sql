@@ -17,7 +17,6 @@ GROUP BY
 -- not much difference, except tesla significantly lower than the others
 
 
-
 -- ANALYSIS 2:
 -- this CTE filters multiple tweets from bot accounts
 WITH no_repeated AS (
@@ -31,16 +30,26 @@ SELECT
 FROM
   no_repeated
 WHERE
-  symbol = 'TSLA' and dt is not null
+--   symbol = 'AAPL' and dt is not null
+--   symbol = 'AMZN' and dt is not null
+  symbol = 'MSFT' and dt is not null
+--   symbol = 'TSLA' and dt is not null
 GROUP BY dt;
 
 SELECT
   dt as "time",
-  high_price as "tsl_stock_price"
+  high_price as "msft_stock_price"
 FROM
-  tsla
+  msft
 WHERE dt >= '2015-01-01'
   AND dt < '2020-01-01';
--- there is an all time low sentiment score on 2016-06-30. What happened?
--- Government agency opens investigation after a tesla driver was killed using the autopilot mode!
--- $TSLA bad news...http://finance.yahoo.com/news/u-opens-investigation-fatal-crash-203822182.html…
+
+-- msft: average sentiment remained almost constant, slight increase
+-- after 2017
+-- aapl: almost mirror image of the stock price. Interesting to notice
+-- that sentiment changes only with large fluctuations. The actual
+-- price of the stock does not matter
+-- amzn: had to be multiplied by 3k. large dip and subsequent rise
+-- in average sentiment during 2017. What happened?
+-- tsla: in rough terms, it seems like stock fluctiations have little
+-- to no effect on average sentiment
