@@ -2,7 +2,7 @@
 SELECT
     symbol,
     writer as tweeteiro,
-    count(comment_num) as num_tweets
+    count(*) as num_tweets
 FROM
     tweets_with_stock_price
 where
