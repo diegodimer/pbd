@@ -1,26 +1,29 @@
--- top 10 writers about apple
-select
-    t.writer,
-    count(t.tweet_id) as username
-from
-    (
-        select
-            tweet_id
-        from
-            company_tweet ct
-        where
-            symbol = 'AAPL'
-    ) ct
-    join tweet t on ct.tweet_id = t.tweet_id
-group by
-    t.writer
+-- select users that most tweet about the companies
+SELECT
+    symbol,
+    writer as tweeteiro,
+    count(comment_num) as num_tweets
+FROM
+    tweets_with_stock_price
+where
+    writer is not null
+    and symbol != 'GOOG'
+    and symbol != 'GOOGL'
+GROUP BY
+    symbol,
+    writer
 order by
-    count(t.tweet_id) desc
+    num_tweets desc
 limit
-    5;
+    10;
 
--- _peripherals	    91424
--- computer_hware	90899
--- MacHashNews	    42190
--- PortfolioBuzz	38719
--- treabase	        13828
+-- MSFT	App_sw_	91640
+-- AAPL	_peripherals	91424
+-- AAPL	computer_hware	90899
+-- AMZN	retail_Dbt	44093
+-- AAPL	MacHashNews	42190
+-- AAPL	PortfolioBuzz	38719
+-- TSLA	markbspiegel	17954
+-- TSLA	PortfolioBuzz	16070
+-- AAPL	treabase	13828
+-- TSLA	Commuternyc	13233
